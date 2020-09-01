@@ -1,7 +1,7 @@
 {
-  "name": "boilerplatesimple",
+  "name": "cloudinaryupload",
   "version": "0.0.1",
-  "description": "Simple boilerplate for editor settings.",
+  "description": "cloudinary image upload api",
   "main": "index.js",
   "repository": {
     "url": "https://",

@@ -1,9 +1,15 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const fileUpload = require('express-fileupload');
+const fileUpload = require('express-fileupload')
 
-const UPLOADS = ['image/jpeg', 'image/gif', 'image/gif']
+const UPLOADS = [
+  'image/jpeg',
+  'image/gif',
+  'image/WebP',
+  'image/SVG',
+  'image/WDP',
+]
 
 app.use(
   fileUpload({
@@ -35,13 +41,13 @@ app.post('/api/upload', (req, res, next) => {
           create_derived: false,
           bytes_step: 20000,
           min_width: 200,
-          max_width: 800,
-          max_images: 4,
+          max_width: 1200,
+          max_images: 6,
         },
       ],
       public_id: md5,
     },
-    function(error, result) {
+    function (error, result) {
       if (error) {
         return res
           .status(500)
